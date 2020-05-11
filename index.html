@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="icon" type="img/png" href="img/map.png">
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>BCS places </title>
+</head>
+<body style="background: #2898bf;">
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">BCS Places</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+     
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">Iniciar como administrador</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Municipios
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">La PAz</a>
+          <a class="dropdown-item" href="#">Los Cabos</a>
+          <a class="dropdown-item" href="#">Comondú</a>
+          <a class="dropdown-item" href="#">Mulegé</a>
+          <a class="dropdown-item" href="#">Loreto</a>
+
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+	<div  id="map"></div>
+
+
+
+
+	<script type="text/javascript" src="main.js"></script>
+
+</body>
+
+
+
+</html>
