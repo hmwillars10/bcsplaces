@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" type="image/png" href="dasc.png">
+		<link rel="stylesheet" type="text/css" href="sw/sweetalert.css">
+		<title>Administrador</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	</head>
+
+	<body>
+		
+
+		<div id="app2">
+			<div class="container-fluid">
+				<div class="card">
+					<div class="card-header">
+						<div class="row">
+							<div class="col-md">
+								<h2>Lugares Registrados</h2>
+								<a href="index.html"><button style="float: right;" type="button" class="btn btn-info">Inicio</button></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-body">
+						<table class="table table-bordered">
+							<thead class="thead-dark">
+								<tr>
+									<th>Municipio</th>
+									<th>Nombre</th>
+									<th>Dirección</th>
+									<th>Telefono</th>
+									<th>Página</th>
+									<th>Editar</th>
+								</tr>
+							</thead>
+
+							<tbody id="tbody">
+								<tr v-for="user in users" v-bind:class="{ user }">
+									<td>{{ user.id }}</td>
+									<td>{{ user.email }}</td>
+									<td>{{ user.name }}</td>
+									<td>{{ user.phone }}</td>
+									<td>{{ user.pagina }}</td>
+									<td><button type="button" class="btn btn-info" v-on:click="editar(user.id)">Editar</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="container container-fluid" style="margin-top: 5%; margin-bottom: 5%;">
+				<div class="card">
+					<div class="card-header">
+						<h2>Gestión de lugares</h2>
+					</div>
+
+					<form>
+						<div class="form-group row">
+							<label for="staticEmail" class="col-sm-2 col-form-label">Municipio: </label>
+						    <div class="col-sm-10">
+						      <input type="text" v-model="id" class="form-control" id="staticEmail">
+						    </div>
+					  	</div>
+					  	<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Nombre: </label>
+						    <div class="col-sm-10">
+						      <input type="text" v-model="email" class="form-control" id="staticEmail">
+						    </div>
+					  	</div>
+					  	<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Dirección: </label>
+						    <div class="col-sm-10">
+						      <input type="text" v-model="name" class="form-control" id="staticEmail">
+						    </div>
+					  	</div>
+					  	<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Telefono: </label>
+						    <div class="col-sm-10">
+						      <input type="text" v-model="phone" class="form-control" id="staticEmail">
+						    </div>
+					  	</div>
+
+					  	<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Página: </label>
+						    <div class="col-sm-10">
+						      <input type="text" v-model="phone" class="form-control" id="staticEmail">
+						    </div>
+					  	</div>
+
+					  	<div class="form-group row">
+							<label class="col-sm-2 col-form-label">Descripción: </label>
+						    <div class="col-sm-10">
+						      <input type="text" v-model="phone" class="form-control" id="staticEmail">
+						    </div>
+					  	</div>
+
+					  	<div class="botones-gestion">
+							<button @click.prevent="agregarUsuario" type="button" class="btn btn-success">Agregar</button>
+							<button @click.prevent="eliminarUsuario" type="button" class="btn btn-danger">Eliminar</button>
+						  	<button @click.prevent="actualizarUsuario" type="button" class="btn btn-primary">Actualizar</button>
+					  	</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="sw/sweetalert.min.js"></script>
+	</body>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</html>

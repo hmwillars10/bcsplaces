@@ -8,3 +8,17 @@ style: 'mapbox://styles/mapbox/streets-v11',
 center:[-111.666069,26.044445],
 zoom:6
 })
+
+ 
+
+ let element = document.createElement('div')
+ element.className = 'marker'
+
+
+ let marker = new mapboxgl.Marker(element)
+ .setLngLat({
+
+ 	lng:-111.666069,
+ 	lat:26.044445
+ })
+ .addTo(map)
